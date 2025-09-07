@@ -4,6 +4,13 @@ import threading
 import random
 import sys
 
+# Clear screen
+os.system('cls' if os.name == 'nt' else 'clear')
+
+# ASCII Logo
+LOGO = """
+\033[92m
+
 
 if os.name == 'nt':
     os.system("cls")
